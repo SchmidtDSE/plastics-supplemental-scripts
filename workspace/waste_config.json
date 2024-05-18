@@ -1,0 +1,20 @@
+{
+    "depth": 18,
+    "estimators": 30,
+    "maxFeatures": "sqrt",
+    "inputs": [
+        "years",
+        "popChange",
+        "gdpChange",
+        "beforePercent",
+        "flagRecycling",
+        "flagIncineration",
+        "flagLandfill",
+        "flagMismanaged",
+        "flagChina",
+        "flagEU30",
+        "flagNafta",
+        "flagRow"
+    ],
+    "response": "afterPercent"
+}

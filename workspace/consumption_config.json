@@ -1,0 +1,23 @@
+{
+    "depth": 5,
+    "estimators": 25,
+    "maxFeatures": "log2",
+    "inputs": [
+        "years",
+        "popChange",
+        "gdpChange",
+        "flagAgriculture",
+        "flagConstruction",
+        "flagElectronic",
+        "flagHouseholdLeisureSports",
+        "flagOther",
+        "flagPackaging",
+        "flagTextile",
+        "flagTransportation",
+        "flagChina",
+        "flagEU30",
+        "flagNafta",
+        "flagRow"
+    ],
+    "response": "consumptionChange"
+}

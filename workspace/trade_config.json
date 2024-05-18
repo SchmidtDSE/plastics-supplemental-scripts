@@ -1,0 +1,20 @@
+{
+    "depth": 15,
+    "estimators": 20,
+    "maxFeatures": "log2",
+    "inputs": [
+        "years",
+        "popChange",
+        "gdpChange",
+        "flagArticles",
+        "flagFibers",
+        "flagGoods",
+        "flagResin",
+        "beforePercent",
+        "flagChina",
+        "flagEU30",
+        "flagNafta",
+        "flagRow"
+    ],
+    "response": "afterPercent"
+}

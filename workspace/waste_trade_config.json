@@ -1,0 +1,17 @@
+{
+    "depth": 9,
+    "estimators": 10,
+    "maxFeatures": "sqrt",
+    "inputs": [
+        "years",
+        "popChange",
+        "gdpChange",
+        "flagSword",
+        "beforePercent",
+        "flagChina",
+        "flagEU30",
+        "flagNafta",
+        "flagRow"
+    ],
+    "response": "afterPercent"
+}
