@@ -258,7 +258,17 @@ def load_summary(sketch, loc, type_name, region):
 
 
 def draw_title(sketch):
-    pass
+    sketch.push_transform()
+    sketch.push_style()
+
+    sketch.set_text_font(FONT_SRC, 23)
+    sketch.set_text_align('center', 'bottom')
+    sketch.clear_stroke()
+    sketch.set_fill('#000000')
+    sketch.draw_text(360, 30, 'MAE in 100 Retraining Trials with New Test Splits')
+
+    sketch.pop_style()
+    sketch.pop_transform()
 
 
 def main():
@@ -272,7 +282,7 @@ def main():
     waste_trade_loc = sys.argv[4]
     output_loc = sys.argv[5]
 
-    sketch = sketchingpy.Sketch2DStatic(700, 600)
+    sketch = sketchingpy.Sketch2DStatic(720, 600)
     sketch.clear('#FFFFFF')
     draw_meta_axis(sketch)
 
