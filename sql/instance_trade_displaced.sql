@@ -1,3 +1,4 @@
+.headers on
 .mode csv
 .output instance_trade_displaced.csv
 SELECT

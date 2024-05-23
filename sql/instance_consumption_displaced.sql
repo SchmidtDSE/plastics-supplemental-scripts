@@ -1,3 +1,4 @@
+.headers on
 .mode csv
 .output instance_consumption_displaced.csv
 SELECT

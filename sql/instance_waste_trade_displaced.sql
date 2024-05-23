@@ -1,3 +1,4 @@
+.headers on
 .mode csv
 .output instance_waste_trade_displaced.csv
 SELECT
