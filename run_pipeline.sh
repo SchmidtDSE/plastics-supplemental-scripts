@@ -5,6 +5,9 @@ wget https://global-plastics-tool.org/datapipeline.zip
 unzip datapipeline.zip
 mv output upstream_outputs
 
+wget https://global-plastics-tool.org/standalone_tasks/scenarios_overview.csv
+mv scenarios_overview.csv upstream_outputs
+
 echo "== Querying database =="
 sqlite3 ./upstream_outputs/combined.db < ./sql/instance_consumption_displaced.sql
 mv instance_consumption_displaced.csv ./workspace
@@ -14,6 +17,10 @@ sqlite3 ./upstream_outputs/combined.db < ./sql/instance_waste_displaced.sql
 mv instance_waste_displaced.csv ./workspace
 sqlite3 ./upstream_outputs/combined.db < ./sql/instance_waste_trade_displaced.sql
 mv instance_waste_trade_displaced.csv ./workspace
+sqlite3 ./upstream_outputs/combined.db < ./sql/china_population_consumption.sql
+mv china_population_consumption.csv ./workspace
+sqlite3 ./upstream_outputs/combined.db < ./sql/china_population_consumption_compare.sql
+mv china_population_consumption_compare.csv ./workspace
 
 echo "== Gathering assets =="
 wget https://github.com/uswds/public-sans/releases/download/v2.001/public-sans-v2.001.zip
@@ -32,6 +39,8 @@ bash run_sims.sh
 
 echo "== Building plots =="
 bash make_trial_plot.sh
+python plot_primary_secondary.py ./upstream_outputs/scenarios_overview.csv ./outputs/primary_secondary.png
+python plot_china_linear.py ./workspace/china_population_consumption.csv ./outputs/china_population_consumption_linear.png
 
 echo "== Confirm output =="
 [ ! -e outputs/trials.png ] && exit 1;
