@@ -1,6 +1,6 @@
 {
-    "depth": 9,
-    "estimators": 10,
+    "depth": 13,
+    "estimators": 30,
     "maxFeatures": "sqrt",
     "inputs": [
         "years",

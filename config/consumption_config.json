@@ -1,6 +1,6 @@
 {
-    "depth": 5,
-    "estimators": 25,
+    "depth": 11,
+    "estimators": 15,
     "maxFeatures": "log2",
     "inputs": [
         "years",

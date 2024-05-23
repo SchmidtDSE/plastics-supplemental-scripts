@@ -1,7 +1,7 @@
 {
-    "depth": 15,
-    "estimators": 20,
-    "maxFeatures": "log2",
+    "depth": 19,
+    "estimators": 25,
+    "maxFeatures": 1,
     "inputs": [
         "years",
         "popChange",
