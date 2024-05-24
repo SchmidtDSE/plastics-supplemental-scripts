@@ -41,9 +41,13 @@ echo "== Building plots =="
 bash make_trial_plot.sh
 python plot_primary_secondary.py ./upstream_outputs/scenarios_overview.csv ./outputs/primary_secondary.png
 python plot_china_linear.py ./workspace/china_population_consumption.csv ./outputs/china_population_consumption_linear.png
+python plot_in_sample.py ./upstream_outputs/consumption_sweep.csv ./upstream_outputs/waste_sweep.csv ./upstream_outputs/trade_sweep.csv ./upstream_outputs/wasteTrade_sweep.csv ./outputs/in_sample.png
 
 echo "== Confirm output =="
 [ ! -e outputs/trials.png ] && exit 1;
+[ ! -e outputs/primary_secondary.png ] && exit 2;
+[ ! -e outputs/china_population_consumption_linear.png ] && exit 3;
+[ ! -e outputs/in_sample.png ] && exit 4;
 echo "Output OK"
 
 echo "== Preparing output =="

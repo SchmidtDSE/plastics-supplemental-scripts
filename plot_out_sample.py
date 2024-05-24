@@ -1,5 +1,5 @@
-import sqlite3
 import sys
+import sqlite3
 
 import matplotlib.pyplot
 import pandas
@@ -7,37 +7,16 @@ import sklearn.linear_model
 import sklearn.pipeline
 
 NUM_ARGS = 5
-USAGE_STR = 'python plot_in_sample.py [consumption] [waste] [trade] [waste trade] [output img]'
-ML_COLORS = {
-    'linear': '#b2df8a',
-    'svr': '#fb9a99',
-    'tree': '#a6cee3',
-    'adaboost': '#1f78b4',
-    'random forest': '#33a02c'
-}
+USAGE_STR = 'python plot_out_sample.py [consumption] [waste] [trade] [waste trade] [output img]'
 
 
 def plot_ml_performance(target, title, max_val, ax, show_legend):
-    type_names = target['type'].unique()
-    for type_name in type_names:
-        subset = target[target['type'] == type_name]
-        ax.scatter(
-            subset['trainInSampleTarget'],
-            subset['validInSampleTarget'],
-            color=ML_COLORS[type_name],
-            alpha=0.5
-        )
+    target.groupby('type')['validOutSampleTarget'].min().sort_values().plot.bar(ax=ax)
+    ax.set_title('Out-Sample MAE for ' + title)
+    ax.set_xlabel('')
+    ax.set_ylabel('MAE (MMT)')
     
-    ax.set_xlim([0, max_val])
-    ax.set_ylim([0, max_val])
-    ax.set_xlabel('In-Sample Training MAE (MMT)')
-    ax.set_ylabel('In-Sample Validation MAE (MMT)')
-    ax.set_title('Individual Models for ' + title)
-    
-    ax.spines[['right', 'top']].set_visible(False)
-    
-    if show_legend:
-        ax.legend(type_names)
+    ax.spines[['left', 'right', 'top']].set_visible(False)
 
 
 def main():
@@ -53,8 +32,8 @@ def main():
 
     fig, ax = matplotlib.pyplot.subplots(2, 2, figsize=(10, 7))
 
-    fig.tight_layout(h_pad=4, w_pad=2)
-    fig.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)
+    fig.tight_layout(h_pad=11, w_pad=4)
+    fig.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.2)
 
     plot_ml_performance(
         pandas.read_csv(consumption_loc),
