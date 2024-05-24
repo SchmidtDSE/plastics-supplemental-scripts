@@ -42,12 +42,18 @@ bash make_trial_plot.sh
 python plot_primary_secondary.py ./upstream_outputs/scenarios_overview.csv ./outputs/primary_secondary.png
 python plot_china_linear.py ./workspace/china_population_consumption.csv ./outputs/china_population_consumption_linear.png
 python plot_in_sample.py ./upstream_outputs/consumption_sweep.csv ./upstream_outputs/waste_sweep.csv ./upstream_outputs/trade_sweep.csv ./upstream_outputs/wasteTrade_sweep.csv ./outputs/in_sample.png
+python plot_nafta_polynomial.py ./upstream_outputs/overview_curve.csv ./outputs/nafta_polynomial.png
+python plot_in_sample.py ./upstream_outputs/consumption_sweep.csv ./upstream_outputs/waste_sweep.csv ./upstream_outputs/trade_sweep.csv ./upstream_outputs/wasteTrade_sweep.csv ./outputs/in_sample.png
+python plot_out_sample.py ./upstream_outputs/consumption_sweep.csv ./upstream_outputs/waste_sweep.csv ./upstream_outputs/trade_sweep.csv ./upstream_outputs/wasteTrade_sweep.csv ./outputs/out_sample.png
 
 echo "== Confirm output =="
 [ ! -e outputs/trials.png ] && exit 1;
 [ ! -e outputs/primary_secondary.png ] && exit 2;
 [ ! -e outputs/china_population_consumption_linear.png ] && exit 3;
 [ ! -e outputs/in_sample.png ] && exit 4;
+[ ! -e outputs/nafta_polynomial.png ] && exit 5;
+[ ! -e outputs/in_sample.png ] && exit 6;
+[ ! -e outputs/out_sample.png ] && exit 7;
 echo "Output OK"
 
 echo "== Preparing output =="
