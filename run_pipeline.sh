@@ -22,6 +22,11 @@ mv china_population_consumption.csv ./workspace
 sqlite3 ./upstream_outputs/combined.db < ./sql/china_population_consumption_compare.sql
 mv china_population_consumption_compare.csv ./workspace
 
+echo "== Getting GHG supplement =="
+wget https://global-plastics-tool.org/data/ghg-pipeline.zip
+unzip ghg-pipeline.zip
+mv deploy upstream_outputs_ghg
+
 echo "== Gathering assets =="
 wget https://github.com/uswds/public-sans/releases/download/v2.001/public-sans-v2.001.zip
 mkdir fonts
@@ -46,6 +51,7 @@ python plot_nafta_polynomial.py ./upstream_outputs/overview_curve.csv ./outputs/
 python plot_in_sample.py ./upstream_outputs/consumption_sweep.csv ./upstream_outputs/waste_sweep.csv ./upstream_outputs/trade_sweep.csv ./upstream_outputs/wasteTrade_sweep.csv ./outputs/in_sample.png
 python plot_out_sample.py ./upstream_outputs/consumption_sweep.csv ./upstream_outputs/waste_sweep.csv ./upstream_outputs/trade_sweep.csv ./upstream_outputs/wasteTrade_sweep.csv ./outputs/out_sample.png
 python find_top_models.py ./upstream_outputs/consumption_sweep.csv ./upstream_outputs/trade_sweep.csv ./upstream_outputs/waste_sweep.csv ./upstream_outputs/wasteTrade_sweep.csv ./outputs/main_performance.csv
+python find_top_model_ghg.py ./upstream_outputs_ghg/sweep.csv ./outputs/ghg_model.json
 
 echo "== Confirm output =="
 [ ! -e outputs/trials.png ] && exit 1;
