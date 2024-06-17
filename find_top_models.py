@@ -10,7 +10,7 @@ def execute_task(task):
     with open(loc, 'r') as f:
         rows = csv.DictReader(f)
         rf_rows = filter(lambda x: x['type'] == 'random forest', rows)
-        min_row = min(rf_rows, keys=lambda x: float(x['validOutSampleResponse']))
+        min_row = min(rf_rows, key=lambda x: float(x['validOutSampleResponse']))
 
         test_mae = float(min_row['testOutSampleTarget'])
         test_mae_str = '%.2f' % test_mae
