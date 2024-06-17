@@ -53,6 +53,9 @@ python plot_out_sample.py ./upstream_outputs/consumption_sweep.csv ./upstream_ou
 python find_top_models.py ./upstream_outputs/consumption_sweep.csv ./upstream_outputs/trade_sweep.csv ./upstream_outputs/waste_sweep.csv ./upstream_outputs/wasteTrade_sweep.csv ./outputs/main_performance.csv
 python find_top_model_ghg.py ./upstream_outputs_ghg/sweep.csv ./outputs/ghg_model.json
 
+echo "== Capture direct copy =="
+cp ./upstream_outputs_ghg/out_sample_test.txt ./outputs/ghg_out_sample_mae.txt
+
 echo "== Confirm output =="
 [ ! -e outputs/trials.png ] && exit 1;
 [ ! -e outputs/primary_secondary.png ] && exit 2;
@@ -63,6 +66,7 @@ echo "== Confirm output =="
 [ ! -e outputs/out_sample.png ] && exit 7;
 [ ! -e outputs/main_performance.csv ] && exit 8;
 [ ! -e outputs/ghg_model.json ] && exit 9;
+[ ! -e outputs/ghg_out_sample_mae.txt ] && exit 10;
 echo "Output OK"
 
 echo "== Preparing output =="
