@@ -45,6 +45,7 @@ python plot_in_sample.py ./upstream_outputs/consumption_sweep.csv ./upstream_out
 python plot_nafta_polynomial.py ./upstream_outputs/overview_curve.csv ./outputs/nafta_polynomial.png
 python plot_in_sample.py ./upstream_outputs/consumption_sweep.csv ./upstream_outputs/waste_sweep.csv ./upstream_outputs/trade_sweep.csv ./upstream_outputs/wasteTrade_sweep.csv ./outputs/in_sample.png
 python plot_out_sample.py ./upstream_outputs/consumption_sweep.csv ./upstream_outputs/waste_sweep.csv ./upstream_outputs/trade_sweep.csv ./upstream_outputs/wasteTrade_sweep.csv ./outputs/out_sample.png
+python find_top_models.py ./upstream_outputs/consumption_sweep.csv ./upstream_outputs/trade_sweep.csv ./upstream_outputs/waste_sweep.csv ./upstream_outputs/wasteTrade_sweep.csv ./outputs/main_performance.csv
 
 echo "== Confirm output =="
 [ ! -e outputs/trials.png ] && exit 1;
@@ -54,6 +55,7 @@ echo "== Confirm output =="
 [ ! -e outputs/nafta_polynomial.png ] && exit 5;
 [ ! -e outputs/in_sample.png ] && exit 6;
 [ ! -e outputs/out_sample.png ] && exit 7;
+[ ! -e outputs/main_performance.csv ] && exit 8;
 echo "Output OK"
 
 echo "== Preparing output =="
