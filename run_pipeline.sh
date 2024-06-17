@@ -62,6 +62,7 @@ echo "== Confirm output =="
 [ ! -e outputs/in_sample.png ] && exit 6;
 [ ! -e outputs/out_sample.png ] && exit 7;
 [ ! -e outputs/main_performance.csv ] && exit 8;
+[ ! -e outputs/ghg_model.json ] && exit 9;
 echo "Output OK"
 
 echo "== Preparing output =="
