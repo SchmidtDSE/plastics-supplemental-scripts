@@ -68,11 +68,11 @@ def main():
         ghg = ghg_by_intervention[intervention]
         
         return {
-            'scenario': target['scenario'],
-            'region': target['region'],
-            'mismanagedMT': target['mismanagedMT'],
-            'primaryMT': target['primaryMT'],
-            'secondaryMT': target['secondaryMT'],
+            'scenario': base_row['scenario'],
+            'region': base_row['region'],
+            'mismanagedMT': base_row['mismanagedMT'],
+            'primaryMT': base_row['primaryMT'],
+            'secondaryMT': base_row['secondaryMT'],
             'ghgMT': ghg
         }
     
