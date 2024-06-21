@@ -27,6 +27,13 @@ wget https://global-plastics-tool.org/data/ghg-pipeline.zip
 unzip ghg-pipeline.zip
 mv deploy upstream_outputs_ghg
 
+echo "== Getting snapshots =="
+wget https://global-plastics-tool.org/data/ghg-snapshot.csv
+mv ghg-snapshot.csv ./upstream_outputs_ghg/ghg-snapshot.csv
+
+wget https://global-plastics-tool.org/standalone_tasks/scenarios_overview.csv
+mv scenarios_overview.csv ./upstream_outputs/scenarios_overview.csv
+
 echo "== Gathering assets =="
 wget https://github.com/uswds/public-sans/releases/download/v2.001/public-sans-v2.001.zip
 mkdir fonts
@@ -42,6 +49,11 @@ mkdir outputs
 echo "== Running sims =="
 bash run_sims.sh
 
+echo "== Build derivative datasets =="
+python find_top_models.py ./upstream_outputs/consumption_sweep.csv ./upstream_outputs/trade_sweep.csv ./upstream_outputs/waste_sweep.csv ./upstream_outputs/wasteTrade_sweep.csv ./outputs/main_performance.csv
+python find_top_model_ghg.py ./upstream_outputs_ghg/sweep.csv ./outputs/ghg_model.json
+python make_policy_brief_csv.py ./upstream_outputs/scenarios_overview.csv ./upstream_outputs_ghg/ghg-snapshot.csv ./outputs/policy_breif.csv
+
 echo "== Building plots =="
 bash make_trial_plot.sh
 python plot_primary_secondary.py ./upstream_outputs/scenarios_overview.csv ./outputs/primary_secondary.png
@@ -50,8 +62,6 @@ python plot_in_sample.py ./upstream_outputs/consumption_sweep.csv ./upstream_out
 python plot_nafta_polynomial.py ./upstream_outputs/overview_curve.csv ./outputs/nafta_polynomial.png
 python plot_in_sample.py ./upstream_outputs/consumption_sweep.csv ./upstream_outputs/waste_sweep.csv ./upstream_outputs/trade_sweep.csv ./upstream_outputs/wasteTrade_sweep.csv ./outputs/in_sample.png
 python plot_out_sample.py ./upstream_outputs/consumption_sweep.csv ./upstream_outputs/waste_sweep.csv ./upstream_outputs/trade_sweep.csv ./upstream_outputs/wasteTrade_sweep.csv ./outputs/out_sample.png
-python find_top_models.py ./upstream_outputs/consumption_sweep.csv ./upstream_outputs/trade_sweep.csv ./upstream_outputs/waste_sweep.csv ./upstream_outputs/wasteTrade_sweep.csv ./outputs/main_performance.csv
-python find_top_model_ghg.py ./upstream_outputs_ghg/sweep.csv ./outputs/ghg_model.json
 
 echo "== Capture direct copy =="
 cp ./upstream_outputs_ghg/out_sample_test.txt ./outputs/ghg_out_sample_mae.txt

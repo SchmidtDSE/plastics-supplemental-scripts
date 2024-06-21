@@ -35,12 +35,7 @@ def parse_scenario_row(target):
 
 
 def get_ghg(target):
-    if target['intervention'] == 'total':
-        reduction = float(target['shareOfCombinedGhg'])
-    else:
-        change = float(target['individualGhg'])
-    
-    return 
+    return float(target['endGhg'])
 
 
 def main():
@@ -74,8 +69,26 @@ def main():
         return {
             'scenario': target['scenario'],
             'region': target['region'],
-            'mismanagedMT': float(target['eolMismanagedMT']),
-            'primaryMT': float(target['primaryProductionMT']),
-            'secondaryMT': float(target['secondaryProductionMT']),
-            'ghg': 
+            'mismanagedMT': target['mismanagedMT'],
+            'primaryMT': target['primaryMT'],
+            'secondaryMT': target['secondaryMT'],
+            'ghgMT': ghg
         }
+    
+    output_rows = map(get_output_row, sorted(ALLOWED_SCENARIOS))
+
+    with open(output_loc, 'w') as f:
+        writer = csv.DictWriter(f, fieldnames=[
+            'scenario',
+            'region',
+            'mismanagedMT',
+            'primaryMT',
+            'secondaryMT',
+            'ghgMT'
+        ])
+        writer.writeheader()
+        writer.writerows(output_rows)
+
+
+if __name__ == '__main__':
+    main()
