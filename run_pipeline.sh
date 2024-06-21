@@ -52,7 +52,7 @@ bash run_sims.sh
 echo "== Build derivative datasets =="
 python find_top_models.py ./upstream_outputs/consumption_sweep.csv ./upstream_outputs/trade_sweep.csv ./upstream_outputs/waste_sweep.csv ./upstream_outputs/wasteTrade_sweep.csv ./outputs/main_performance.csv
 python find_top_model_ghg.py ./upstream_outputs_ghg/sweep.csv ./outputs/ghg_model.json
-python make_policy_brief_csv.py ./upstream_outputs/scenarios_overview.csv ./upstream_outputs_ghg/ghg-snapshot.csv ./outputs/policy_breif.csv
+python make_policy_brief_csv.py ./upstream_outputs/scenarios_overview.csv ./upstream_outputs_ghg/ghg-snapshot.csv ./outputs/policy_brief.csv
 
 echo "== Building plots =="
 bash make_trial_plot.sh
@@ -77,6 +77,7 @@ echo "== Confirm output =="
 [ ! -e outputs/main_performance.csv ] && exit 8;
 [ ! -e outputs/ghg_model.json ] && exit 9;
 [ ! -e outputs/ghg_out_sample_mae.txt ] && exit 10;
+[ ! -e outputs/policy_brief.csv ] && exit 11;
 echo "Output OK"
 
 echo "== Preparing output =="
