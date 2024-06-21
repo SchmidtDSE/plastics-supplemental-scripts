@@ -28,8 +28,8 @@ unzip ghg-pipeline.zip
 mv deploy upstream_outputs_ghg
 
 echo "== Getting snapshots =="
-wget https://global-plastics-tool.org/data/ghg-snapshot.csv
-mv ghg-snapshot.csv ./upstream_outputs_ghg/ghg-snapshot.csv
+wget https://global-plastics-tool.org/data/ghg_snapshot.csv
+mv ghg_snapshot.csv ./upstream_outputs_ghg/ghg_snapshot.csv
 
 wget https://global-plastics-tool.org/standalone_tasks/scenarios_overview.csv
 mv scenarios_overview.csv ./upstream_outputs/scenarios_overview.csv
@@ -52,7 +52,7 @@ bash run_sims.sh
 echo "== Build derivative datasets =="
 python find_top_models.py ./upstream_outputs/consumption_sweep.csv ./upstream_outputs/trade_sweep.csv ./upstream_outputs/waste_sweep.csv ./upstream_outputs/wasteTrade_sweep.csv ./outputs/main_performance.csv
 python find_top_model_ghg.py ./upstream_outputs_ghg/sweep.csv ./outputs/ghg_model.json
-python make_policy_brief_csv.py ./upstream_outputs/scenarios_overview.csv ./upstream_outputs_ghg/ghg-snapshot.csv ./outputs/policy_brief.csv
+python make_policy_brief_csv.py ./upstream_outputs/scenarios_overview.csv ./upstream_outputs_ghg/ghg_snapshot.csv ./outputs/policy_brief.csv
 
 echo "== Building plots =="
 bash make_trial_plot.sh
