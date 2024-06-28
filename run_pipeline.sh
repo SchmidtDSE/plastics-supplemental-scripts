@@ -1,7 +1,8 @@
 mkdir workspace
 
 echo "== Pulling data =="
-wget https://global-plastics-tool.org/datapipeline.zip
+wget https://global-plastics-tool.org/datapipeline.zip?v=20240628
+mv datapipeline.zip?v=20240628 datapipeline.zip
 unzip datapipeline.zip
 mv output upstream_outputs
 
@@ -24,15 +25,18 @@ sqlite3 ./upstream_outputs/combined.db < ./sql/china_population_consumption_comp
 mv china_population_consumption_compare.csv ./workspace
 
 echo "== Getting GHG supplement =="
-wget https://global-plastics-tool.org/data/ghg-pipeline.zip
+wget https://global-plastics-tool.org/data/ghg-pipeline.zip?v=20240628
+mv ghg-pipeline.zip?v=20240628 ghg-pipeline.zip
 unzip ghg-pipeline.zip
 mv deploy upstream_outputs_ghg
 
 echo "== Getting snapshots =="
-wget https://global-plastics-tool.org/data/ghg_snapshot.csv
+wget https://global-plastics-tool.org/data/ghg_snapshot.csv?v=20240628
+mv ghg_snapshot.csv?v=20240628 ghg_snapshot.csv
 mv ghg_snapshot.csv ./upstream_outputs_ghg/ghg_snapshot.csv
 
-wget https://global-plastics-tool.org/standalone_tasks/scenarios_overview.csv
+wget https://global-plastics-tool.org/standalone_tasks/scenarios_overview.csv?v=20240628
+mv scenarios_overview.csv?v=20240628 scenarios_overview.csv
 mv scenarios_overview.csv ./upstream_outputs/scenarios_overview.csv
 
 echo "== Gathering assets =="
