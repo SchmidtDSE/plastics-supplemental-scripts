@@ -18,7 +18,7 @@ INDIVIDUAL_SCENARIOS = [
     'wasteInvestment'
 ]
 
-COMBINED_SCENARIOS = ['highAmbition', 'businessAsUsual']
+COMBINED_SCENARIOS = ['highAmbition', 'businessAsUsual', 'selectPackage']
 
 ALLOWED_SCENARIOS = set(INDIVIDUAL_SCENARIOS).union(set(COMBINED_SCENARIOS))
 
