@@ -5,7 +5,7 @@ wget https://global-plastics-tool.org/datapipeline.zip
 unzip datapipeline.zip
 mv output upstream_outputs
 
-wget https://global-plastics-tool.org/standalone_tasks/scenarios_overview.csv
+wget https://global-plastics-tool.org/standalone_tasks/scenarios_overview.csv?v=20240628
 mv scenarios_overview.csv upstream_outputs
 
 echo "== Querying database =="
