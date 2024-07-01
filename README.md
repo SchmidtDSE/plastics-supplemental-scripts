@@ -34,5 +34,6 @@ Some scripts also use:
 
  - [Color Brewer v2](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3) under the [Apache v2 License](https://github.com/axismaps/colorbrewer/blob/master/LICENCE.txt).
  - [Public Sans](https://public-sans.digital.gov/) under the [CC0 License](https://github.com/uswds/public-sans/blob/develop/LICENSE.md).
+ - [SQLite](https://www.sqlite.org/) which is in the [public domain](https://www.sqlite.org/copyright.html).
 
 We thank these projects for their contribution.
