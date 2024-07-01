@@ -5,7 +5,7 @@ Supporting scripts and graphics for documentation of the [Global Plastics AI Pol
 A collection of small scripts used to support the preparation of derivative datasets and secondary graphs which complement the [Global Plastics AI Policy Tool](https://global-plastics-tool.org/). See also the [main tool repository](https://github.com/SchmidtDSE/plastics-prototype) that these scripts support.
 
 ## Usage
-Simply install python dependencies (`pip install -r requirements.txt`) and execute the small pipeline (`bash run_pipeline.sh`).
+Simply install python dependencies (`pip install -r requirements.txt`) and execute the small pipeline (`bash run_pipeline.sh`). Note that this does not run the optional OpenRefine script to generate supplemental dataset 1 under the `refine` subdirectory.
 
 ## Local development environment
 No additional steps beyond install of python dependencies (`pip install -r requirements.txt`) are required though users may consider building a [virtual environment](https://the-hitchhikers-guide-to-packaging.readthedocs.io/en/latest/virtualenv.html).
@@ -24,6 +24,7 @@ This repository uses the following open source resources:
 
  - [Matplotlib](https://matplotlib.org/) under the [PSF License](https://matplotlib.org/stable/project/license.html).
  - [NumPy](https://numpy.org/) under the [BSD License](https://github.com/numpy/numpy/blob/main/LICENSE.txt).
+ - [OpenRefine](https://openrefine.org/) under the [BSD License](https://github.com/OpenRefine/OpenRefine/blob/master/LICENSE.txt).
  - [pandas](https://pandas.pydata.org/) under the [BSD License](https://github.com/pandas-dev/pandas/blob/main/LICENSE).
  - [Sketchingpy](https://sketchingpy.org/) under the [BSD License](https://codeberg.org/sketchingpy/Sketchingpy/src/branch/main/LICENSE.md).
  - [scikit-learn](https://scikit-learn.org/stable/) under the [BSD License](https://github.com/scikit-learn/scikit-learn/blob/main/COPYING).
