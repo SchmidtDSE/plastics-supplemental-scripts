@@ -1,0 +1,821 @@
+[
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "scenario",
+            "expression": "value",
+            "columnName": "scenario",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "businessAsUsual",
+                  "l": "businessAsUsual"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "scenario",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "businessAsUsual"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "businessAsUsual2050"
+        }
+      ],
+      "description": "Mass edit cells in column scenario"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "scenario",
+            "expression": "value",
+            "columnName": "scenario",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "highAmbition",
+                  "l": "highAmbition"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "scenario",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "highAmbition"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "highAmbition2050"
+        }
+      ],
+      "description": "Mass edit cells in column scenario"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "scenario",
+            "expression": "value",
+            "columnName": "scenario",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "lowAmbition",
+                  "l": "lowAmbition"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "scenario",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "lowAmbition"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "lowAmbition2050"
+        }
+      ],
+      "description": "Mass edit cells in column scenario"
+    },
+    {
+      "op": "core/column-rename",
+      "oldColumnName": "scenario",
+      "newColumnName": "scenarioKey",
+      "description": "Rename column scenario to scenarioKey"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "region",
+            "expression": "value",
+            "columnName": "region",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "china",
+                  "l": "china"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "region",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "china"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "China"
+        }
+      ],
+      "description": "Mass edit cells in column region"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "region",
+            "expression": "value",
+            "columnName": "region",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "eu30",
+                  "l": "eu30"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "region",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "eu30"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EU30"
+        }
+      ],
+      "description": "Mass edit cells in column region"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "region",
+            "expression": "value",
+            "columnName": "region",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "global",
+                  "l": "global"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "region",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "global"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Global"
+        }
+      ],
+      "description": "Mass edit cells in column region"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "region",
+            "expression": "value",
+            "columnName": "region",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "nafta",
+                  "l": "nafta"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "region",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "nafta"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "North America"
+        }
+      ],
+      "description": "Mass edit cells in column region"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "region",
+            "expression": "value",
+            "columnName": "region",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "row",
+                  "l": "row"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "region",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "row"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Majority World"
+        }
+      ],
+      "description": "Mass edit cells in column region"
+    },
+    {
+      "op": "core/column-rename",
+      "oldColumnName": "eolRecyclingMT",
+      "newColumnName": "eolRecyclingMt",
+      "description": "Rename column eolRecyclingMT to eolRecyclingMt"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "eolRecyclingMt",
+      "expression": "value.toNumber()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column eolRecyclingMt using expression value.toNumber()"
+    },
+    {
+      "op": "core/column-rename",
+      "oldColumnName": "eolLandfillMT",
+      "newColumnName": "eolLandfillMt",
+      "description": "Rename column eolLandfillMT to eolLandfillMt"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "eolLandfillMt",
+      "expression": "value.toNumber()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column eolLandfillMt using expression value.toNumber()"
+    },
+    {
+      "op": "core/column-rename",
+      "oldColumnName": "eolIncinerationMT",
+      "newColumnName": "eolIncinerationMt",
+      "description": "Rename column eolIncinerationMT to eolIncinerationMt"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "eolIncinerationMt",
+      "expression": "value.toNumber()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column eolIncinerationMt using expression value.toNumber()"
+    },
+    {
+      "op": "core/column-rename",
+      "oldColumnName": "eolMismanagedMT",
+      "newColumnName": "eolMismanagedMt",
+      "description": "Rename column eolMismanagedMT to eolMismanagedMt"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "eolMismanagedMt",
+      "expression": "value.toNumber()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column eolMismanagedMt using expression value.toNumber()"
+    },
+    {
+      "op": "core/column-rename",
+      "oldColumnName": "consumptionAgricultureMT",
+      "newColumnName": "consumptionAgricultureMt",
+      "description": "Rename column consumptionAgricultureMT to consumptionAgricultureMt"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "consumptionAgricultureMt",
+      "expression": "value.toNumber()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column consumptionAgricultureMt using expression value.toNumber()"
+    },
+    {
+      "op": "core/column-rename",
+      "oldColumnName": "consumptionConstructionMT",
+      "newColumnName": "consumptionConstructionMt",
+      "description": "Rename column consumptionConstructionMT to consumptionConstructionMt"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "consumptionConstructionMt",
+      "expression": "value.toNumber()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column consumptionConstructionMt using expression value.toNumber()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "consumptionElectronicMT",
+      "expression": "value.toNumber()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column consumptionElectronicMT using expression value.toNumber()"
+    },
+    {
+      "op": "core/column-rename",
+      "oldColumnName": "consumptionElectronicMT",
+      "newColumnName": "consumptionElectronicMt",
+      "description": "Rename column consumptionElectronicMT to consumptionElectronicMt"
+    },
+    {
+      "op": "core/column-rename",
+      "oldColumnName": "consumptionHouseholdLeisureSportsMT",
+      "newColumnName": "consumptionHouseholdLeisureSportsMt",
+      "description": "Rename column consumptionHouseholdLeisureSportsMT to consumptionHouseholdLeisureSportsMt"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "consumptionHouseholdLeisureSportsMt",
+      "expression": "value.toNumber()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column consumptionHouseholdLeisureSportsMt using expression value.toNumber()"
+    },
+    {
+      "op": "core/column-rename",
+      "oldColumnName": "consumptionPackagingMT",
+      "newColumnName": "consumptionPackagingMt",
+      "description": "Rename column consumptionPackagingMT to consumptionPackagingMt"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "consumptionPackagingMt",
+      "expression": "value.toNumber()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column consumptionPackagingMt using expression value.toNumber()"
+    },
+    {
+      "op": "core/column-rename",
+      "oldColumnName": "consumptionTransportationMT",
+      "newColumnName": "consumptionTransportationMt",
+      "description": "Rename column consumptionTransportationMT to consumptionTransportationMt"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "consumptionTransportationMt",
+      "expression": "value.toNumber()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column consumptionTransportationMt using expression value.toNumber()"
+    },
+    {
+      "op": "core/column-rename",
+      "oldColumnName": "consumptionTextileMT",
+      "newColumnName": "consumptionTextileMt",
+      "description": "Rename column consumptionTextileMT to consumptionTextileMt"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "consumptionTextileMt",
+      "expression": "value.toNumber()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column consumptionTextileMt using expression value.toNumber()"
+    },
+    {
+      "op": "core/column-rename",
+      "oldColumnName": "consumptionOtherMT",
+      "newColumnName": "consumptionOtherMt",
+      "description": "Rename column consumptionOtherMT to consumptionOtherMt"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "consumptionOtherMt",
+      "expression": "value.toNumber()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column consumptionOtherMt using expression value.toNumber()"
+    },
+    {
+      "op": "core/column-rename",
+      "oldColumnName": "netImportsMT",
+      "newColumnName": "netImportsMt",
+      "description": "Rename column netImportsMT to netImportsMt"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "netImportsMt",
+      "expression": "value.toNumber()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column netImportsMt using expression value.toNumber()"
+    },
+    {
+      "op": "core/column-rename",
+      "oldColumnName": "netExportsMT",
+      "newColumnName": "netExportsMt",
+      "description": "Rename column netExportsMT to netExportsMt"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "netExportsMt",
+      "expression": "value.toNumber()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column netExportsMt using expression value.toNumber()"
+    },
+    {
+      "op": "core/column-rename",
+      "oldColumnName": "primaryProductionMT",
+      "newColumnName": "primaryProductionMt",
+      "description": "Rename column primaryProductionMT to primaryProductionMt"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "primaryProductionMt",
+      "expression": "value.toNumber()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column primaryProductionMt using expression value.toNumber()"
+    },
+    {
+      "op": "core/column-rename",
+      "oldColumnName": "secondaryProductionMT",
+      "newColumnName": "secondaryProductionMt",
+      "description": "Rename column secondaryProductionMT to secondaryProductionMt"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "secondaryProductionMt",
+      "expression": "value.toNumber()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column secondaryProductionMt using expression value.toNumber()"
+    },
+    {
+      "op": "core/column-rename",
+      "oldColumnName": "netWasteExportMT",
+      "newColumnName": "netWasteExportMt",
+      "description": "Rename column netWasteExportMT to netWasteExportMt"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "netWasteExportMt",
+      "expression": "value.toNumber()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column netWasteExportMt using expression value.toNumber()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "netWasteImportMT",
+      "expression": "value.toNumber()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column netWasteImportMT using expression value.toNumber()"
+    },
+    {
+      "op": "core/column-rename",
+      "oldColumnName": "netWasteImportMT",
+      "newColumnName": "netWasteImportMt",
+      "description": "Rename column netWasteImportMT to netWasteImportMt"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "baseColumnName": "scenarioKey",
+      "expression": "jython:try:\n  return int(value[-4:])\nexcept ValueError:\n  return 2050",
+      "onError": "set-to-blank",
+      "newColumnName": "year",
+      "columnInsertIndex": 1,
+      "description": "Create column year at index 1 based on column scenarioKey using expression jython:try:\n  return int(value[-4:])\nexcept ValueError:\n  return 2050"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "baseColumnName": "region",
+      "expression": "jython:return 1 if value == 'Global' else 0",
+      "onError": "set-to-blank",
+      "newColumnName": "isGlobal",
+      "columnInsertIndex": 3,
+      "description": "Create column isGlobal at index 3 based on column region using expression jython:return 1 if value == 'Global' else 0"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "baseColumnName": "scenarioKey",
+      "expression": "jython:return 'lowAmbition' in value or 'highAmbition' in value",
+      "onError": "set-to-blank",
+      "newColumnName": "isWebsite",
+      "columnInsertIndex": 1,
+      "description": "Create column isWebsite at index 1 based on column scenarioKey using expression jython:return 'lowAmbition' in value or 'highAmbition' in value"
+    },
+    {
+      "op": "core/row-removal",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "isWebsite",
+            "expression": "value",
+            "columnName": "isWebsite",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": 1,
+                  "l": "1"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "description": "Remove rows"
+    },
+    {
+      "op": "core/column-removal",
+      "columnName": "isWebsite",
+      "description": "Remove column isWebsite"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "baseColumnName": "isGlobal",
+      "expression": "jython:return sum([\n    cells['consumptionAgricultureMt'].value,\n    cells['consumptionConstructionMt'].value,\n    cells['consumptionElectronicMt'].value,\n    cells['consumptionHouseholdLeisureSportsMt'].value,\n    cells['consumptionPackagingMt'].value,\n    cells['consumptionTransportationMt'].value,\n    cells['consumptionTextileMt'].value,\n    cells['consumptionOtherMt'].value\n])",
+      "onError": "set-to-blank",
+      "newColumnName": "totalConsumptionMt",
+      "columnInsertIndex": 4,
+      "description": "Create column totalConsumptionMt at index 4 based on column isGlobal using expression jython:return sum([\n    cells['consumptionAgricultureMt'].value,\n    cells['consumptionConstructionMt'].value,\n    cells['consumptionElectronicMt'].value,\n    cells['consumptionHouseholdLeisureSportsMt'].value,\n    cells['consumptionPackagingMt'].value,\n    cells['consumptionTransportationMt'].value,\n    cells['consumptionTextileMt'].value,\n    cells['consumptionOtherMt'].value\n])"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "baseColumnName": "totalConsumptionMt",
+      "expression": "jython:return sum([\n    cells['eolRecyclingMt'].value,\n    cells['eolLandfillMt'].value,\n    cells['eolIncinerationMt'].value,\n    cells['eolMismanagedMt'].value\n])",
+      "onError": "set-to-blank",
+      "newColumnName": "totalWasteMt",
+      "columnInsertIndex": 5,
+      "description": "Create column totalWasteMt at index 5 based on column totalConsumptionMt using expression jython:return sum([\n    cells['eolRecyclingMt'].value,\n    cells['eolLandfillMt'].value,\n    cells['eolIncinerationMt'].value,\n    cells['eolMismanagedMt'].value\n])"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "baseColumnName": "scenarioKey",
+      "expression": "jython:return {\n    'banPsPackaging': '90% reduction in polystyrene packaging.',\n    'banSingleUse': '90% reduction in single use packaging.',\n    'banWasteTrade': 'Ban waste trade.',\n    'businessAsUsual2011': 'Projections without interventions in 2011.',\n    'businessAsUsual2012': 'Projections without interventions in 2012.',\n    'businessAsUsual2013': 'Projections without interventions in 2013.',\n    'businessAsUsual2014': 'Projections without interventions in 2014.',\n    'businessAsUsual2015': 'Projections without interventions in 2015.',\n    'businessAsUsual2016': 'Projections without interventions in 2016.',\n    'businessAsUsual2017': 'Projections without interventions in 2017.',\n    'businessAsUsual2018': 'Projections without interventions in 2018.',\n    'businessAsUsual2019': 'Projections without interventions in 2019.',\n    'businessAsUsual2020': 'Projections without interventions in 2020.',\n    'businessAsUsual2021': 'Projections without interventions in 2021.',\n    'businessAsUsual2022': 'Projections without interventions in 2022.',\n    'businessAsUsual2023': 'Projections without interventions in 2023.',\n    'businessAsUsual2024': 'Projections without interventions in 2024.',\n    'businessAsUsual2025': 'Projections without interventions in 2025.',\n    'businessAsUsual2026': 'Projections without interventions in 2026.',\n    'businessAsUsual2027': 'Projections without interventions in 2027.',\n    'businessAsUsual2028': 'Projections without interventions in 2028.',\n    'businessAsUsual2029': 'Projections without interventions in 2029.',\n    'businessAsUsual2030': 'Projections without interventions in 2030.',\n    'businessAsUsual2031': 'Projections without interventions in 2031.',\n    'businessAsUsual2032': 'Projections without interventions in 2032.',\n    'businessAsUsual2033': 'Projections without interventions in 2033.',\n    'businessAsUsual2034': 'Projections without interventions in 2034.',\n    'businessAsUsual2035': 'Projections without interventions in 2035.',\n    'businessAsUsual2036': 'Projections without interventions in 2036.',\n    'businessAsUsual2037': 'Projections without interventions in 2037.',\n    'businessAsUsual2038': 'Projections without interventions in 2038.',\n    'businessAsUsual2039': 'Projections without interventions in 2039.',\n    'businessAsUsual2040': 'Projections without interventions in 2040.',\n    'businessAsUsual2041': 'Projections without interventions in 2041.',\n    'businessAsUsual2042': 'Projections without interventions in 2042.',\n    'businessAsUsual2043': 'Projections without interventions in 2043.',\n    'businessAsUsual2044': 'Projections without interventions in 2044.',\n    'businessAsUsual2045': 'Projections without interventions in 2045.',\n    'businessAsUsual2046': 'Projections without interventions in 2046.',\n    'businessAsUsual2047': 'Projections without interventions in 2047.',\n    'businessAsUsual2048': 'Projections without interventions in 2048.',\n    'businessAsUsual2049': 'Projections without interventions in 2049.',\n    'businessAsUsual2050': 'Projections without interventions in 2050.',\n    'capVirgin': 'Cap virgin plastic production levels to 2020 values.',\n    'minimumPackagingReuse': '80% packaging reuse mandate.',\n    'minimumRecycledContent': '40% minimum recycling by secondary production content mandate.',\n    'minimumRecyclingRate': '40% recycling collection rate.',\n    'recyclingInvestment': '$100B USD recycling investment',\n    'reducedAdditives': 'Ban problematic additives.',\n    'selectPackage': '4 policy scenario presented in paper (recycling content, cap to virgin production, waste infrastructure investment, packaging consumption tax).',\n    'taxVirgin': 'Packaging consumption tax.',\n    'wasteInvestment': '$50B USD waste infrastructure investment.'\n}[value]",
+      "onError": "set-to-blank",
+      "newColumnName": "scenarioDescription",
+      "columnInsertIndex": 1,
+      "description": "Create column scenarioDescription at index 1 based on column scenarioKey using expression jython:return {\n    'banPsPackaging': '90% reduction in polystyrene packaging.',\n    'banSingleUse': '90% reduction in single use packaging.',\n    'banWasteTrade': 'Ban waste trade.',\n    'businessAsUsual2011': 'Projections without interventions in 2011.',\n    'businessAsUsual2012': 'Projections without interventions in 2012.',\n    'businessAsUsual2013': 'Projections without interventions in 2013.',\n    'businessAsUsual2014': 'Projections without interventions in 2014.',\n    'businessAsUsual2015': 'Projections without interventions in 2015.',\n    'businessAsUsual2016': 'Projections without interventions in 2016.',\n    'businessAsUsual2017': 'Projections without interventions in 2017.',\n    'businessAsUsual2018': 'Projections without interventions in 2018.',\n    'businessAsUsual2019': 'Projections without interventions in 2019.',\n    'businessAsUsual2020': 'Projections without interventions in 2020.',\n    'businessAsUsual2021': 'Projections without interventions in 2021.',\n    'businessAsUsual2022': 'Projections without interventions in 2022.',\n    'businessAsUsual2023': 'Projections without interventions in 2023.',\n    'businessAsUsual2024': 'Projections without interventions in 2024.',\n    'businessAsUsual2025': 'Projections without interventions in 2025.',\n    'businessAsUsual2026': 'Projections without interventions in 2026.',\n    'businessAsUsual2027': 'Projections without interventions in 2027.',\n    'businessAsUsual2028': 'Projections without interventions in 2028.',\n    'businessAsUsual2029': 'Projections without interventions in 2029.',\n    'businessAsUsual2030': 'Projections without interventions in 2030.',\n    'businessAsUsual2031': 'Projections without interventions in 2031.',\n    'businessAsUsual2032': 'Projections without interventions in 2032.',\n    'businessAsUsual2033': 'Projections without interventions in 2033.',\n    'businessAsUsual2034': 'Projections without interventions in 2034.',\n    'businessAsUsual2035': 'Projections without interventions in 2035.',\n    'businessAsUsual2036': 'Projections without interventions in 2036.',\n    'businessAsUsual2037': 'Projections without interventions in 2037.',\n    'businessAsUsual2038': 'Projections without interventions in 2038.',\n    'businessAsUsual2039': 'Projections without interventions in 2039.',\n    'businessAsUsual2040': 'Projections without interventions in 2040.',\n    'businessAsUsual2041': 'Projections without interventions in 2041.',\n    'businessAsUsual2042': 'Projections without interventions in 2042.',\n    'businessAsUsual2043': 'Projections without interventions in 2043.',\n    'businessAsUsual2044': 'Projections without interventions in 2044.',\n    'businessAsUsual2045': 'Projections without interventions in 2045.',\n    'businessAsUsual2046': 'Projections without interventions in 2046.',\n    'businessAsUsual2047': 'Projections without interventions in 2047.',\n    'businessAsUsual2048': 'Projections without interventions in 2048.',\n    'businessAsUsual2049': 'Projections without interventions in 2049.',\n    'businessAsUsual2050': 'Projections without interventions in 2050.',\n    'capVirgin': 'Cap virgin plastic production levels to 2020 values.',\n    'minimumPackagingReuse': '80% packaging reuse mandate.',\n    'minimumRecycledContent': '40% minimum recycling by secondary production content mandate.',\n    'minimumRecyclingRate': '40% recycling collection rate.',\n    'recyclingInvestment': '$100B USD recycling investment',\n    'reducedAdditives': 'Ban problematic additives.',\n    'selectPackage': '4 policy scenario presented in paper (recycling content, cap to virgin production, waste infrastructure investment, packaging consumption tax).',\n    'taxVirgin': 'Packaging consumption tax.',\n    'wasteInvestment': '$50B USD waste infrastructure investment.'\n}[value]"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "scenarioKey",
+            "expression": "value",
+            "columnName": "scenarioKey",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "taxVirgin",
+                  "l": "taxVirgin"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "scenarioKey",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "taxVirgin"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "consumptionTax"
+        }
+      ],
+      "description": "Mass edit cells in column scenarioKey"
+    }
+  ]
